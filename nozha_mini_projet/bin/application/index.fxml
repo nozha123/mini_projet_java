@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="1071.0" style="-fx-background-color: #9f98ea; -fx-background-image: TI;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entreprise.Controller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="0.0" prefWidth="6.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="410.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="9.0" prefWidth="9.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="table" prefHeight="212.0" prefWidth="597.0" style="-fx-background-color: #c8c2f1; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="4" GridPane.rowSpan="3">
+        <columns>
+          <TableColumn id="matricule" fx:id="mat" prefWidth="60.0" text="Mat" />
+          <TableColumn id="nom" fx:id="nom" prefWidth="117.0" text="Nom" />
+            <TableColumn id="email" fx:id="email" prefWidth="112.0" text="E-mail" />
+            <TableColumn id="annee" fx:id="recrutement" prefWidth="136.0" text="DateEmbauche" />
+            <TableColumn id="salaire" fx:id="salairefixe" prefWidth="97.0" text="Salaire" />
+            <TableColumn fx:id="Categorie" prefWidth="209.0" text="Categorie" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="importBt" prefHeight="658.0" prefWidth="0.0" GridPane.columnSpan="2" GridPane.rowSpan="4">
+         <children>
+            <Text fill="#170c90" layoutX="82.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Salaries" textAlignment="CENTER" wrappingWidth="435.2060546875">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="inputcategorie" layoutX="323.0" layoutY="301.0" prefHeight="40.0" prefWidth="234.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="inputemail" layoutX="68.0" layoutY="205.0" prefHeight="40.0" prefWidth="196.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="inputsalaire" layoutX="71.0" layoutY="301.0" prefHeight="40.0" prefWidth="196.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="inputrecrutement" layoutX="325.0" layoutY="203.0" prefHeight="44.0" prefWidth="234.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="inputmat" layoutX="71.0" layoutY="118.0" prefHeight="44.0" prefWidth="196.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="inputnom" layoutX="325.0" layoutY="118.0" prefHeight="44.0" prefWidth="234.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Button fx:id="ExportBt" layoutX="104.0" layoutY="384.0" mnemonicParsing="false" onAction="#ExportSalarie" opacity="0.39" prefHeight="44.0" prefWidth="113.0" style="-fx-background-color: #DDDDDD; -fx-border-color: black; -fx-border-radius: 10; -fx-cursor: hand;" text="Export" textFill="#271b75">
+               <font>
+                  <Font name="Lucida Sans Demibold Italic" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="9.0" layoutY="132.0" text="Matricule" textFill="#271b75" wrapText="true" />
+            <Label layoutX="273.0" layoutY="132.0" text="Nom" textFill="#271b75" wrapText="true" />
+            <Label layoutX="14.0" layoutY="217.0" prefHeight="17.0" prefWidth="41.0" text="Email" textFill="#271b75" wrapText="true" />
+            <Label layoutX="268.0" layoutY="217.0" prefHeight="17.0" prefWidth="50.0" text="Date" textFill="#271b75" wrapText="true" />
+            <Label layoutX="14.0" layoutY="301.0" text="Salaire" textFill="#271b75" wrapText="true" />
+            <Label layoutX="273.0" layoutY="310.0" text="Categorie" textFill="#271b75" wrapText="true" />
+            <Button fx:id="ExportBt1" layoutX="384.0" layoutY="384.0" mnemonicParsing="false" onAction="#ExportSalarie" opacity="0.39" prefHeight="44.0" prefWidth="113.0" style="-fx-background-color: #DDDDDD; -fx-border-color: black; -fx-border-radius: 10; -fx-cursor: hand;" text="importer" textFill="#271b75">
+               <font>
+                  <Font name="Lucida Sans Demibold Italic" size="17.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+      </AnchorPane>
+      <Button fx:id="select" mnemonicParsing="false" onAction="#select" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: royalblue; -fx-cursor: hand;" text="Select" textFill="#f2f2f2" GridPane.columnIndex="4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="edit" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: orange; -fx-cursor: hand;" text="Editier" textFill="#f8f8f8" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="add" mnemonicParsing="false" onAction="#Ajouter" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: green; -fx-cursor: hand;" text="Ajouter" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label text="Matricule" />
+      <Label text="Matricule" />
+      <HBox blendMode="SCREEN" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button fx:id="supp" mnemonicParsing="false" onAction="#Supprimer" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: red; -fx-cursor: hand;" text="Supprimer" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <VBox prefHeight="200.0" prefWidth="100.0" />
+   </children>
+</GridPane>
